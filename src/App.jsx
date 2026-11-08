@@ -815,23 +815,29 @@ function ProjectCard({ project, onOpen, compact = false }) {
         <h3>{project.title}</h3>
         <p className="project-subtitle">{project.subtitle}</p>
         <p className="project-summary">{project.summary}</p>
-        <div className="project-card-footer">
-          <button className="text-link" type="button" onClick={() => onOpen(project)}>
-            Explore project <ArrowRight size={15} />
-          </button>
+        <div className="project-access-links" aria-label={`${project.title} project links`}>
           {project.repo ? (
-            <a
-              className="icon-link"
-              href={project.repo}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Open ${project.title} on GitHub`}
-            >
-              <Github size={17} />
+            <a className="project-access-link" href={project.repo} target="_blank" rel="noreferrer">
+              <Github size={14} /> GitHub <ExternalLink size={12} />
             </a>
           ) : (
             <span className="repo-pending">Repository to add</span>
           )}
+          {project.demo && (
+            <a className="project-access-link project-demo-link" href={project.demo} target="_blank" rel="noreferrer">
+              Live demo <ExternalLink size={12} />
+            </a>
+          )}
+          {project.relatedRepo && (
+            <a className="project-access-link" href={project.relatedRepo} target="_blank" rel="noreferrer">
+              Group repo <ExternalLink size={12} />
+            </a>
+          )}
+        </div>
+        <div className="project-card-footer">
+          <button className="text-link" type="button" onClick={() => onOpen(project)}>
+            Explore project <ArrowRight size={15} />
+          </button>
         </div>
       </div>
     </article>

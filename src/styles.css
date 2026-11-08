@@ -2730,6 +2730,46 @@ h2 em {
   }
 }
 
+.project-access-links {
+  display: flex;
+  min-height: 34px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.project-access-link {
+  display: inline-flex;
+  min-height: 29px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 9px;
+  border: 1px solid #35465d;
+  background: #17263a;
+  color: #d3deec;
+  font-size: 10px;
+  font-weight: 600;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.project-access-link:hover {
+  border-color: #91add0;
+  background: #20344d;
+  color: #f3f7fc;
+}
+
+.project-demo-link {
+  border-color: #526985;
+  color: #c1d5ef;
+}
+
+@media (max-width: 600px) {
+  .project-access-link {
+    font-size: 11px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -20,7 +20,7 @@ npm run preview
 
 ## Portfolio content
 
-Project entries, project-detail content, experience, education, certificates, skills, and community initiatives are maintained as structured data in `src/App.jsx`. The project browser can be filtered by field, and each card opens a detailed view.
+Project entries, project-detail content, experience, education, certificates, skills, and community initiatives are maintained as structured data in `src/App.jsx`. The project browser can be filtered by field, and each card opens a detailed view. Cards also link directly to each available GitHub repository and to verified live demos where provided.
 
 The project browser groups work under AI & machine learning, data & BI, networks, product & web, and creative & animation. The related creditworthiness repositories and repeated Local Store link are consolidated into single entries. PCC Finance and the signup application are based on the supplied brief and marked for review because a matching repository was not confirmed in the public GitHub account. Video animation is included as creative work; the linked animation repositories have no source files yet, so project specifics and samples remain to be added.
 
