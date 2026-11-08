@@ -3317,6 +3317,31 @@ h2 em {
   font: 700 15px/1.5 var(--sans);
 }
 
+.certificate-date {
+  margin: -4px 0 14px;
+  color: #aab9cd;
+  font-size: 11px;
+}
+
+.certificate-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.certificate-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #c0d4ed;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.certificate-links a:hover {
+  color: #fff;
+}
+
 .certificate-pending {
   display: inline-flex;
   align-items: center;
@@ -3349,6 +3374,7 @@ h2 em {
   .certificate-image-placeholder {
     min-height: 175px;
   }
+
 }
 
 body {

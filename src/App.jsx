@@ -11,6 +11,7 @@ import {
   Code2,
   Download,
   ExternalLink,
+  FileText,
   Github,
   GraduationCap,
   HeartHandshake,
@@ -35,9 +36,9 @@ const projects = [
     subtitle: "Mobile money · Fraud monitoring",
     category: "AI & ML",
     label: "Applied AI",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=85",
-    alt: "Person using a phone for a digital payment",
+    image: "/images/momo-sentinel.png",
+    imageLabel: "Mobile money app screenshot",
+    alt: "Mobile money app screenshot showing the balance, MoMo Pay, Statements, and Report Fraud options",
     repo: `${github}/momo-fraud-detection`,
     status: "Project",
     summary:
@@ -143,7 +144,8 @@ const projects = [
     alt: "Analytics charts on a computer display",
     repo: `${github}/-Sales-Trends_KPI-`,
     demo:
-      "https://app.powerbi.com/links/48FzQ2s6RL?ctid=16d83ee6-254a-469d-a6cc-54e2ca2313e7&pbi_source=linkShare",
+      "https://app.powerbi.com/groups/me/reports/90d1e9c1-6d08-4ff4-9477-99ab47c2ec4d?ctid=16d83ee6-254a-469d-a6cc-54e2ca2313e7&pbi_source=linkShare",
+    report: "/reports/sales-trends-kpis.pdf",
     status: "Project",
     summary:
       "An interactive retail dashboard for exploring sales, profit, product performance, regional patterns, and time-based trends.",
@@ -203,15 +205,51 @@ const projects = [
     visual: "visual-marketing",
   },
   {
+    id: "social-media",
+    title: "Social Media Campaign Performance",
+    subtitle: "Social media · Campaign analytics",
+    category: "Data & BI",
+    label: "Power BI",
+    image:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=85",
+    alt: "Social media campaign analysis workspace",
+    demo:
+      "https://app.powerbi.com/groups/me/reports/38b78b62-4190-4c4b-99c3-66fb6dd1d753?ctid=16d83ee6-254a-469d-a6cc-54e2ca2313e7&pbi_source=linkShare",
+    report: "/reports/social-media-analysis.pdf",
+    status: "Project",
+    summary:
+      "A Power BI campaign tracker for exploring impressions, click-through rates, approved conversations, audience interests, and campaign spend.",
+    overview:
+      "An interactive Power BI report that brings together campaign activity, audience breakdowns, and spending measures for social media analysis.",
+    problem:
+      "Campaign performance can be difficult to compare when reach, audience interest, engagement, and spend are viewed separately.",
+    objectives: [
+      "Bring campaign and audience measures together in one report.",
+      "Explore impressions, click-through rate, and approved conversations.",
+      "Compare audience interest, age and gender breakdowns, and campaign spend.",
+    ],
+    contribution:
+      "Prepared a campaign performance report in Power BI. Add details about the data-cleaning workflow and individual contribution after review.",
+    tools: ["Microsoft Power BI", "Social media campaign data"],
+    implementation:
+      "The report includes visuals for impressions, approved conversations, click-through rate, interest categories, audience age and gender, campaign IDs, and spend.",
+    results:
+      "The dashboard provides interactive campaign and audience views. The attached report is available to inspect; no additional performance outcome is claimed.",
+    learning:
+      "Comparing campaign reach with audience and cost measures helps provide context for performance review.",
+    visual: "visual-social-media",
+  },
+  {
     id: "nexo",
     title: "Nexo Girls Website",
     subtitle: "Web development · Community",
     category: "Product & Web",
     label: "Volunteer · Web Design Lead",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85",
-    alt: "Young woman smiling outdoors",
+    image: "/images/nexo-girls-banner.png",
+    imageLabel: "Nexo Girls website banner",
+    alt: "Nexo Girls Metaverse banner featuring young women",
     repo: `${github}/Nexo-Girls`,
+    demo: "https://nexo-girls.vercel.app/",
     status: "Volunteer project",
     summary:
       "A responsive React website supporting Nexo Girls’ digital presence, with reusable pages, navigation, and programme information.",
@@ -331,21 +369,23 @@ const projects = [
     subtitle: "Animation · Individual and group work",
     category: "Creative & Animation",
     label: "Animation",
-    image:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85",
-    alt: "Video editing and animation work displayed on a monitor",
+    image: "/images/animation-sample.png",
+    imageLabel: "Animation video still",
+    alt: "Frame from an animated video featuring a child and toys in a living room",
     repo: `${github}/Video-animation`,
     relatedRepo: `${github}/Group-7-video-animation`,
+    demo: "https://www.youtube.com/watch?v=p-NZdL_9wzE&t=10s",
+    demoLabel: "Watch on YouTube",
     status: "Creative work",
     reviewStatus: "Samples to add",
     summary:
       "I’ve done video-animation work, including a group project. Examples and project context can be added as they’re ready.",
     overview:
-      "An animation portfolio entry for individual and group video-animation work. The linked GitHub repositories are currently empty, so this page does not claim specific tools, techniques, or deliverables.",
+      "An animation portfolio entry with a sample video on YouTube. The linked GitHub repositories are currently empty, so this page does not claim specific tools or production techniques.",
     problem: "Project context to add.",
     objectives: ["Add the project brief and objectives when the examples are ready."],
     contribution:
-      "Animation work, including a group project. Individual contributions and group-project details can be added alongside the work samples.",
+      "Created animation work, including a group project. Additional individual-contribution and production details can be added alongside the video sample.",
     tools: ["Tools and techniques to add"],
     implementation: "Add a short production overview and approved video or stills.",
     results: "Add confirmed project outcomes when available.",
@@ -353,7 +393,7 @@ const projects = [
     visual: "visual-animation",
     needsReview: true,
     reviewNote:
-      "Animation work included. The linked repositories do not contain source files yet; add approved samples and production details when available.",
+      "Watch the animation sample on YouTube. The linked repositories do not contain source files yet; add production details when available.",
   },
   {
     id: "secure-student-portal",
@@ -430,9 +470,9 @@ const projects = [
     subtitle: "Scheduling · Web application",
     category: "Product & Web",
     label: "Node.js · Scheduling",
-    image:
-      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=85",
-    alt: "A calendar and planner for organizing a schedule",
+    image: "/images/school-timetable-generator.png",
+    imageLabel: "Generated school timetable screenshot",
+    alt: "Generated weekly school timetable with weekday columns, scheduled lessons, and a tea break",
     repo: `${github}/timetablegenerator`,
     status: "Project",
     summary:
@@ -752,8 +792,11 @@ const skillGroups = [
 
 const certificates = [
   {
-    name: "Google Professional Certificate in Data Analytics",
+    name: "Google Data Analytics Professional Certificate",
     issuer: "Google · Coursera",
+    date: "Issued August 16, 2025",
+    file: "/certificates/google-data-analytics.pdf",
+    verify: "https://coursera.org/verify/professional-cert/CP5NMWG2FPKL",
   },
   {
     name: "Transformative Leadership Training",
@@ -803,9 +846,9 @@ const communityProjects = [
   {
     title: "Digital literacy & introduction to programming",
     place: "Good Samaritan",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85",
-    alt: "Learners working together at a laptop",
+    image: "/images/good-samaritan.png",
+    imageLabel: "Digital skills training photo",
+    alt: "Photograph from the Good Samaritan digital literacy and coding training",
     description:
       "Tutored learners in computer use and basic digital literacy, then introduced HTML, CSS, C#, and practical programming exercises.",
     tags: ["Computer literacy", "HTML & CSS", "C#"],
@@ -814,9 +857,9 @@ const communityProjects = [
   {
     title: "Community skills through tote-bag training",
     place: "Fountain of Grace",
-    image:
-      "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=85",
-    alt: "Hands working on a creative sewing project",
+    image: "/images/fountain-of-grace.png",
+    imageLabel: "Fountain of Grace project photo",
+    alt: "Young people displaying finished tote bags at a community sewing workshop",
     description:
       "Joined a community challenge involving practical tote-bag training. I supported the activity and learned sewing alongside the community—a reminder that service can also be mutual learning.",
     tags: ["Practical skills", "Collaboration", "Mutual learning"],
@@ -847,7 +890,7 @@ function ProjectCard({ project, onOpen, compact = false }) {
       >
         <img src={project.image} alt={project.alt} loading="lazy" />
         <span className="image-shade" />
-        <span className="image-placeholder-tag">Stock image · replace with project media</span>
+        <span className="image-placeholder-tag">{project.imageLabel || "Stock image · replace with project media"}</span>
         <span className="image-category">{project.label}</span>
         <span className="image-open" aria-hidden="true">
           <ArrowUpRight size={18} />
@@ -873,7 +916,12 @@ function ProjectCard({ project, onOpen, compact = false }) {
           )}
           {project.demo && (
             <a className="project-access-link project-demo-link" href={project.demo} target="_blank" rel="noreferrer">
-              Live demo <ExternalLink size={12} />
+              {project.demoLabel || "Live demo"} <ExternalLink size={12} />
+            </a>
+          )}
+          {project.report && (
+            <a className="project-access-link" href={project.report} target="_blank" rel="noreferrer">
+              View report <FileText size={12} />
             </a>
           )}
           {project.relatedRepo && (
@@ -931,7 +979,7 @@ function ProjectDialog({ project, onClose, dialogRef }) {
       <div className={`dialog-image ${project.visual}`}>
         <img src={project.image} alt={project.alt} />
         <span className="image-shade" />
-        <span className="image-placeholder-tag">Stock image · replace with project media</span>
+        <span className="image-placeholder-tag">{project.imageLabel || "Stock image · replace with project media"}</span>
       </div>
       <div className="dialog-content">
         {project.needsReview && (
@@ -969,7 +1017,12 @@ function ProjectDialog({ project, onClose, dialogRef }) {
           )}
           {project.demo && (
             <a className="button button-outline" href={project.demo} target="_blank" rel="noreferrer">
-              Visit live project <ExternalLink size={15} />
+              {project.demoLabel || "Visit live project"} <ExternalLink size={15} />
+            </a>
+          )}
+          {project.report && (
+            <a className="button button-outline" href={project.report} target="_blank" rel="noreferrer">
+              <FileText size={15} /> View report PDF <ExternalLink size={15} />
             </a>
           )}
           {project.relatedRepo && (
@@ -1204,7 +1257,7 @@ function App() {
                   <div className={`community-image ${project.visual}`}>
                     <img src={project.image} alt={project.alt} loading="lazy" />
                     <span className="community-image-index">0{index + 1}</span>
-                    <span className="stock-label">Stock image · replace with project photo</span>
+                    <span className="stock-label">{project.imageLabel || "Stock image · replace with project photo"}</span>
                   </div>
                   <div className="community-card-body">
                     <p className="community-place">{project.place}</p>
@@ -1316,22 +1369,41 @@ function App() {
               <SectionHeading
                 eyebrow="06 / Certificates"
                 title={<>Professional certificates<br /><em>&amp; training.</em></>}
-                copy="Dedicated spaces for the original certificate images and links, ready for you to add."
+                copy="The Google Data Analytics credential is available as a PDF with a verification link; image placeholders remain for other training."
               />
               <div className="certificate-seal"><BadgeCheck size={21} /><span>Credentials</span></div>
             </div>
             <div className="certificate-grid">
               {certificates.map((certificate, index) => (
                 <article className="certificate-card" key={certificate.name}>
-                  <div className="certificate-image-placeholder" role="img" aria-label={`${certificate.name} certificate image placeholder`}>
+                  <div
+                    className="certificate-image-placeholder"
+                    role="img"
+                    aria-label={`${certificate.name} ${certificate.file ? "PDF available" : "certificate image placeholder"}`}
+                  >
                     <span className="certificate-image-index">0{index + 1}</span>
                     <BadgeCheck size={28} strokeWidth={1.3} />
-                    <span>Certificate image to add</span>
+                    <span>{certificate.file ? "Credential PDF available" : "Certificate image to add"}</span>
                   </div>
                   <div className="certificate-details">
                     <p className="eyebrow">{certificate.issuer}</p>
                     <h3>{certificate.name}</h3>
-                    <span className="certificate-pending"><span /> Image and credential link to add</span>
+                    {certificate.date && <p className="certificate-date">{certificate.date}</p>}
+                    <div className="certificate-links">
+                      {certificate.file && (
+                        <a href={certificate.file} target="_blank" rel="noreferrer">
+                          <FileText size={14} /> View certificate
+                        </a>
+                      )}
+                      {certificate.verify && (
+                        <a href={certificate.verify} target="_blank" rel="noreferrer">
+                          <BadgeCheck size={14} /> Verify credential
+                        </a>
+                      )}
+                      {!certificate.file && (
+                        <span className="certificate-pending"><span /> Image and credential link to add</span>
+                      )}
+                    </div>
                   </div>
                 </article>
               ))}
