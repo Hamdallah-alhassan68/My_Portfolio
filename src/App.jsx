@@ -36,9 +36,9 @@ const projects = [
     subtitle: "Mobile money · Fraud monitoring",
     category: "AI & ML",
     label: "Applied AI",
-    image: "/images/momo-sentinel.png",
-    imageLabel: "Mobile money app screenshot",
-    alt: "Mobile money app screenshot showing the balance, MoMo Pay, Statements, and Report Fraud options",
+    image: "/images/momo-sentinel.jpg",
+    imageLabel: "MoMo Sentinel project image",
+    alt: "Photo supplied for the MoMo Sentinel project",
     repo: `${github}/momo-fraud-detection`,
     status: "Project",
     summary:
