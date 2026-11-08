@@ -564,9 +564,8 @@ const projects = [
     subtitle: "Community organization · Digital presence",
     category: "Product & Web",
     label: "React · PHP · MySQL",
-    image:
-      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=85",
-    alt: "A group collaborating at a community workshop",
+    image: "/images/get-impeccable-homepage.png",
+    alt: "Get Impeccable website homepage, featuring its organization navigation and Become Impeccable hero section",
     repo: `${github}/Get-Impeccable`,
     status: "Volunteer project",
     summary:

@@ -27,6 +27,7 @@ The project browser groups work under AI & machine learning, data & BI, networks
 ## Personal assets and editable items
 
 - Replace `public/images/hamdallah.webp` to update the profile portrait.
+- Replace `public/images/get-impeccable-homepage.png` to update the Get Impeccable project screenshot.
 - Replace `public/Hamdallah-Alhassan-CV.pdf` to update the downloadable CV.
 - Add certificate images and credential links to the certificate entries in `src/App.jsx`.
 - Update project links, dates marked “to confirm,” contact details, and certificate links before publishing.
