@@ -2730,6 +2730,26 @@ h2 em {
   }
 }
 
+.timeline-highlights {
+  display: grid;
+  gap: 7px;
+  margin: 11px 0 0;
+  padding-left: 17px;
+  color: #a7b3c2;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.timeline-highlights li::marker {
+  color: #b7cce6;
+}
+
+@media (max-width: 600px) {
+  .timeline-highlights {
+    font-size: 12px;
+  }
+}
+
 .project-access-links {
   display: flex;
   min-height: 34px;

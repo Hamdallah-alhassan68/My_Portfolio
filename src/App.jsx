@@ -597,6 +597,43 @@ const projects = [
 
 const experience = [
   {
+    role: "IT Support & Systems Data Assistant",
+    organization: "Pinnacle Construction Co. Ltd. (PCC)",
+    date: "Sep 2026 – Present · Accra, Ghana",
+    description:
+      "Supporting IT operations and systems data integrity across department functions.",
+    highlights: [
+      "Maintained 100% operational data integrity through structured data analysis and technical documentation for IT infrastructure systems.",
+      "Delivered daily system administration reports and real-time infrastructure performance metrics, contributing to a reported 20% improvement in executive decision-making speed.",
+    ],
+    icon: PanelsTopLeft,
+  },
+  {
+    role: "Volunteer",
+    organization: "Angaza Technology Center",
+    date: "May 2026 – Sep 2026 · Kenya",
+    description:
+      "Mentored high school students through remote digital literacy and STEM learning sessions.",
+    highlights: [
+      "Mentored 45+ students through virtual sessions focused on digital literacy and STEM.",
+      "Designed interactive modules introducing coding, data analysis, and digital problem-solving.",
+      "Guided participants in applying STEM concepts to real-world challenges and building career readiness.",
+    ],
+    icon: HeartHandshake,
+  },
+  {
+    role: "Data Analytics Intern",
+    organization: "Future Intern",
+    date: "Jun 2025 – Aug 2025 · Remote",
+    description:
+      "Built reporting workflows and analyzed digital engagement data to support stakeholder reporting.",
+    highlights: [
+      "Built Power BI and Excel analytics pipelines, contributing to a reported 30% increase in departmental reporting efficiency.",
+      "Used Python to analyze digital engagement metrics and support accurate performance tracking and stakeholder reports.",
+    ],
+    icon: PanelsTopLeft,
+  },
+  {
     role: "Campus Director · Cohort B",
     organization: "Millennium Campus Network (MCN) · USIU-A",
     date: "Class of 2025",
@@ -643,6 +680,18 @@ const experience = [
     description:
       "Scholarship recipient and participant in leadership development and community engagement, including the Fountain of Grace community challenge.",
     icon: BadgeCheck,
+  },
+  {
+    role: "Inventory & Financial Data Operations Manager",
+    organization: "Baby Koko Restaurant",
+    date: "Aug 2018 – Jul 2022",
+    description:
+      "Managed inventory and financial data operations, including procurement tracking and daily performance monitoring.",
+    highlights: [
+      "Developed inventory tracking and procurement workflows, contributing to a reported 15% reduction in resource waste and food spoilage.",
+      "Tracked profit and loss, revenue, food-preparation targets, and customer feedback to support daily operational decisions.",
+    ],
+    icon: BriefcaseBusiness,
   },
 ];
 
@@ -1204,7 +1253,7 @@ function App() {
               <SectionHeading
                 eyebrow="Experience & leadership"
                 title={<>Learning by<br /><em>showing up.</em></>}
-                copy="A mix of leadership, volunteering, and community-facing work. Dates are marked for confirmation where needed."
+                copy="Professional roles, analytics experience, technical volunteering, and community leadership."
               />
               <a className="text-link" href="#contact">Connect about my experience <ArrowRight size={16} /></a>
             </div>
@@ -1219,6 +1268,11 @@ function App() {
                       <h3>{item.role}</h3>
                       <p className="timeline-org">{item.organization}</p>
                       <p className="timeline-description">{item.description}</p>
+                      {item.highlights && (
+                        <ul className="timeline-highlights">
+                          {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                        </ul>
+                      )}
                     </div>
                   </article>
                 );
