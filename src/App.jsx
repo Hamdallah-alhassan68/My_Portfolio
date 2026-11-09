@@ -796,6 +796,7 @@ const certificates = [
     issuer: "Google · Coursera",
     date: "Issued August 16, 2025",
     file: "/certificates/google-data-analytics.pdf",
+    preview: "/certificates/google-data-analytics-preview.png",
     verify: "https://coursera.org/verify/professional-cert/CP5NMWG2FPKL",
   },
   {
@@ -803,18 +804,21 @@ const certificates = [
     issuer: "Cisco Networking Academy",
     date: "Completed May 4, 2025",
     file: "/certificates/introduction-to-data-science.pdf",
+    preview: "/certificates/introduction-to-data-science-preview.png",
   },
   {
     name: "Networking Basics",
     issuer: "Cisco Networking Academy",
     date: "Completed November 9, 2026",
     file: "/certificates/networking-basics.pdf",
+    preview: "/certificates/networking-basics-preview.png",
   },
   {
     name: "Getting Started with Cisco Packet Tracer",
     issuer: "Cisco Networking Academy",
     date: "Completed November 9, 2026",
     file: "/certificates/getting-started-with-cisco-packet-tracer.pdf",
+    preview: "/certificates/getting-started-with-cisco-packet-tracer-preview.png",
   },
   {
     name: "Transformative Leadership Training",
@@ -1394,15 +1398,22 @@ function App() {
             <div className="certificate-grid">
               {certificates.map((certificate, index) => (
                 <article className="certificate-card" key={certificate.name}>
-                  <div
-                    className="certificate-image-placeholder"
-                    role="img"
-                    aria-label={`${certificate.name} ${certificate.file ? "PDF available" : "certificate image placeholder"}`}
-                  >
-                    <span className="certificate-image-index">0{index + 1}</span>
-                    <BadgeCheck size={28} strokeWidth={1.3} />
-                    <span>{certificate.file ? "Credential PDF available" : "Certificate image to add"}</span>
-                  </div>
+                  {certificate.preview ? (
+                    <a className="certificate-preview-link" href={certificate.file} target="_blank" rel="noreferrer">
+                      <img
+                        className="certificate-preview"
+                        src={certificate.preview}
+                        alt={`${certificate.name} certificate`}
+                        loading="lazy"
+                      />
+                    </a>
+                  ) : (
+                    <div className="certificate-image-placeholder" role="img" aria-label={`${certificate.name} certificate image placeholder`}>
+                      <span className="certificate-image-index">0{index + 1}</span>
+                      <BadgeCheck size={28} strokeWidth={1.3} />
+                      <span>Certificate image to add</span>
+                    </div>
+                  )}
                   <div className="certificate-details">
                     <p className="eyebrow">{certificate.issuer}</p>
                     <h3>{certificate.name}</h3>

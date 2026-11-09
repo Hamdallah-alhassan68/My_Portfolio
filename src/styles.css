@@ -3280,10 +3280,26 @@ h2 em {
   background: #111e30;
 }
 
+.certificate-preview-link {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid #2b3a4e;
+  background: #fff;
+}
+
+.certificate-preview {
+  display: block;
+  width: 100%;
+  height: 390px;
+  border: 0;
+  object-fit: contain;
+  background: #fff;
+}
+
 .certificate-image-placeholder {
   position: relative;
   display: flex;
-  min-height: 214px;
+  min-height: 390px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -3372,7 +3388,11 @@ h2 em {
   }
 
   .certificate-image-placeholder {
-    min-height: 175px;
+    min-height: 280px;
+  }
+
+  .certificate-preview {
+    height: 280px;
   }
 
 }
