@@ -1118,8 +1118,19 @@ function App() {
         typeof result === "object" &&
         [true, "true"].includes(result.success);
       if (!response.ok || !succeeded) {
+        const serviceMessage =
+          result && typeof result === "object" && result.message;
+        if (
+          typeof serviceMessage === "string" &&
+          serviceMessage.toLowerCase().includes("confirm your email")
+        ) {
+          setMessageState(
+            `FormSubmit has not activated delivery to ${contactEmail} yet. Check that inbox, including spam, for FormSubmit’s activation email and click its confirmation link. Then submit your inquiry again.`,
+          );
+          return;
+        }
         setMessageState(
-          (result && typeof result === "object" && result.message) ||
+          serviceMessage ||
             "Your message could not be sent. Please email me directly instead.",
         );
         return;
