@@ -28,6 +28,7 @@ import {
 
 const github = "https://github.com/Hamdallah-alhassan68";
 const linkedin = "https://www.linkedin.com/in/hamdallahalhassan/";
+const contactEmail = "hamdallahalhassan68@gmail.com";
 
 const projects = [
   {
@@ -1063,6 +1064,7 @@ function App() {
   const [activeProject, setActiveProject] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [messageState, setMessageState] = useState("");
+  const [isSending, setIsSending] = useState(false);
   const dialogRef = useRef(null);
 
   const visibleProjects = projects.filter(
@@ -1074,16 +1076,60 @@ function App() {
     setMobileMenuOpen(false);
   }
 
-  function handleContactSubmit(event) {
+  async function handleContactSubmit(event) {
     event.preventDefault();
-    if (!event.currentTarget.reportValidity()) {
+    const form = event.currentTarget;
+    if (!form.reportValidity()) {
       setMessageState("Please complete each field with a valid email address.");
       return;
     }
-    setMessageState(
-      "Your inquiry is ready. This preview does not send messages or reserve a meeting. Please use LinkedIn to arrange a call.",
-    );
-    event.currentTarget.reset();
+
+    setIsSending(true);
+    setMessageState("");
+
+    const formData = new FormData(form);
+    const subject = formData.get("subject");
+    formData.set("_subject", `Portfolio inquiry: ${subject}`);
+    formData.set("_template", "table");
+
+    try {
+      let response;
+      try {
+        response = await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        });
+      } catch {
+        setMessageState("We couldn’t connect to the email service. Please email me directly instead.");
+        return;
+      }
+
+      let result;
+      try {
+        result = await response.json();
+      } catch {
+        setMessageState("The email service returned an unexpected response. Please email me directly instead.");
+        return;
+      }
+
+      const succeeded =
+        result &&
+        typeof result === "object" &&
+        [true, "true"].includes(result.success);
+      if (!response.ok || !succeeded) {
+        setMessageState(
+          (result && typeof result === "object" && result.message) ||
+            "Your message could not be sent. Please email me directly instead.",
+        );
+        return;
+      }
+
+      setMessageState("Thanks — your message was sent. I’ll get back to you by email.");
+      form.reset();
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -1503,7 +1549,7 @@ function App() {
               <div className="contact-social-links">
                 <a href={github} target="_blank" rel="noreferrer"><Github size={17} /><span>GitHub</span><ArrowUpRight size={15} /></a>
                 <a href={linkedin} target="_blank" rel="noreferrer"><Linkedin size={17} /><span>LinkedIn</span><ArrowUpRight size={15} /></a>
-                <span className="email-placeholder"><Mail size={17} /><span>Email address to add</span></span>
+                <a href={`mailto:${contactEmail}`}><Mail size={17} /><span>{contactEmail}</span></a>
               </div>
               <a className="button button-outline cv-button" href="/Hamdallah-Alhassan-CV.pdf" download>
                 <Download size={16} /> Download my CV
@@ -1511,7 +1557,7 @@ function App() {
             </div>
             <form className="contact-form" onSubmit={handleContactSubmit}>
               <div className="form-heading"><span>Have a project or opportunity in mind?</span><Send size={17} /></div>
-              <p className="form-intro">Tell me what you have in mind. You can also request a call; no meeting is booked until we confirm it directly.</p>
+              <p className="form-intro">Tell me what you have in mind. You can also request a call; no meeting is booked until we confirm it directly. Messages are sent securely through FormSubmit. The first submission requires confirming my email address with them.</p>
               <label>
                 Your name
                 <input name="name" type="text" autoComplete="name" placeholder="How should I address you?" required />
@@ -1557,9 +1603,11 @@ function App() {
                 Message
                 <textarea name="message" rows="4" placeholder="A little about what you have in mind..." required />
               </label>
-              <button className="button button-dark form-submit" type="submit">Prepare inquiry <ArrowUpRight size={16} /></button>
+              <button className="button button-dark form-submit" type="submit" disabled={isSending}>
+                {isSending ? "Sending..." : "Send inquiry"} <ArrowUpRight size={16} />
+              </button>
               <p className={`form-status${messageState ? " form-status-visible" : ""}`} role="status" aria-live="polite">
-                {messageState || "Your details stay in this browser preview. Nothing is sent and no call is booked."}
+                {messageState || "Your inquiry will be emailed to me. A call is only scheduled after we confirm it directly."}
               </p>
             </form>
           </div>
