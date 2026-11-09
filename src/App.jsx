@@ -799,6 +799,24 @@ const certificates = [
     verify: "https://coursera.org/verify/professional-cert/CP5NMWG2FPKL",
   },
   {
+    name: "Introduction to Data Science",
+    issuer: "Cisco Networking Academy",
+    date: "Completed May 4, 2025",
+    file: "/certificates/introduction-to-data-science.pdf",
+  },
+  {
+    name: "Networking Basics",
+    issuer: "Cisco Networking Academy",
+    date: "Completed November 9, 2026",
+    file: "/certificates/networking-basics.pdf",
+  },
+  {
+    name: "Getting Started with Cisco Packet Tracer",
+    issuer: "Cisco Networking Academy",
+    date: "Completed November 9, 2026",
+    file: "/certificates/getting-started-with-cisco-packet-tracer.pdf",
+  },
+  {
     name: "Transformative Leadership Training",
     issuer: "Mastercard Foundation Scholars Program",
   },

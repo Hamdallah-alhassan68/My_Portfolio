@@ -29,7 +29,7 @@ The project browser groups work under AI & machine learning, data & BI, networks
 - Replace `public/images/hamdallah.webp` to update the profile portrait.
 - Replace the project and community images in `public/images/` to update supplied screenshots and photographs.
 - Replace `public/Hamdallah-Alhassan-CV.pdf` to update the downloadable CV.
-- The Google Data Analytics certificate PDF and verification link are displayed in the certificate section. Add certificate images and credential links to the certificate entries in `src/App.jsx`.
+- Google Data Analytics and Cisco Networking Academy certificate PDFs are displayed in the certificate section. Add certificate images and credential links to the certificate entries in `src/App.jsx`.
 - Supplied Sales Trends and Social Media Analysis report PDFs are in `public/reports/` and are linked from their project cards.
 - Update project links, dates marked “to confirm,” contact details, and certificate links before publishing.
 - Project and community photographs use supplied local images where available and remote Unsplash images elsewhere; replace stock images with approved project photography as it becomes available.
