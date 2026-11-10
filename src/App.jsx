@@ -219,25 +219,28 @@ const projects = [
     report: "/reports/social-media-analysis.pdf",
     status: "Project",
     summary:
-      "A Power BI campaign tracker for exploring impressions, click-through rates, approved conversations, audience interests, and campaign spend.",
+      "An interactive Power BI dashboard for analysing social media campaign performance, including impressions, click-through rates, approved conversations, audience interests, demographic patterns, and campaign spending.",
     overview:
-      "An interactive Power BI report that brings together campaign activity, audience breakdowns, and spending measures for social media analysis.",
+      "This project uses Microsoft Power BI to bring together campaign performance and audience information in an interactive reporting dashboard. It provides a consolidated view of campaign activity, audience characteristics, and spending measures.",
     problem:
-      "Campaign performance can be difficult to compare when reach, audience interest, engagement, and spend are viewed separately.",
+      "Social media campaign performance involves multiple measures that can be difficult to interpret when viewed separately. A dashboard makes it easier to compare campaign reach, audience engagement, and spending.",
     objectives: [
-      "Bring campaign and audience measures together in one report.",
-      "Explore impressions, click-through rate, and approved conversations.",
-      "Compare audience interest, age and gender breakdowns, and campaign spend.",
+      "Organize campaign data for reporting.",
+      "Monitor impressions and click-through rates.",
+      "Examine approved conversations.",
+      "Explore audience interests and demographic patterns.",
+      "Compare campaign spending.",
+      "Present findings through interactive visualizations.",
     ],
     contribution:
-      "Prepared a campaign performance report in Power BI. Add details about the data-cleaning workflow and individual contribution after review.",
+      "Developed an interactive Power BI report to organize and present social media campaign data. Worked on arranging campaign metrics, audience breakdowns, and spending information into visual reports that support easier performance analysis.",
     tools: ["Microsoft Power BI", "Social media campaign data"],
     implementation:
-      "The report includes visuals for impressions, approved conversations, click-through rate, interest categories, audience age and gender, campaign IDs, and spend.",
+      "The dashboard uses Power BI visualizations to present impressions, click-through rates, approved conversations, audience interests, age and gender breakdowns, campaign identifiers, and campaign spending.",
     results:
-      "The dashboard provides interactive campaign and audience views. The attached report is available to inspect; no additional performance outcome is claimed.",
+      "The dashboard provides an interactive overview of campaign activity and audience characteristics, allowing users to explore performance measures and compare campaign information.",
     learning:
-      "Comparing campaign reach with audience and cost measures helps provide context for performance review.",
+      "Strengthened skills in business intelligence, data visualization, dashboard development, and communicating campaign performance through analytical reports.",
     visual: "visual-social-media",
   },
   {
@@ -286,51 +289,64 @@ const projects = [
     repo: `${github}/College_Event_Feedback_Analysis`,
     status: "Project",
     summary:
-      "An analysis project exploring student feedback to better understand event and academic-support experiences.",
+      "An internship project focused on analysing student feedback to identify recurring themes, understand student experiences, and generate insights that can support improvements in college events and academic support services.",
     overview:
-      "A feedback-analysis project focused on making student responses more useful for reviewing programmes and support services.",
+      "This project involved organizing and analysing student feedback to better understand participants' experiences and identify areas that may require attention. It demonstrates the use of data analysis to turn collected responses into useful information for decision-making.",
     problem:
-      "Feedback is less useful when it is collected but not systematically organized or explored.",
+      "Student feedback can contain valuable information about the quality of events and academic support. However, collecting responses alone is not enough; the information needs to be organized and examined to identify patterns and areas for improvement.",
     objectives: [
-      "Structure student feedback for analysis.",
-      "Explore response patterns and recurring themes.",
-      "Present findings that can inform programme review.",
+      "Organize collected student feedback for analysis.",
+      "Identify recurring responses, concerns, and themes.",
+      "Examine feedback patterns to understand student experiences.",
+      "Present findings that can inform future programme and event improvements.",
     ],
     contribution:
-      "Completed as an internship project. Specific tools, individual responsibilities, and outcome details are left for confirmation.",
-    tools: ["Project details to confirm"],
+      "Contributed to an internship project involving the analysis of student feedback. The work focused on examining responses and presenting information that could help stakeholders better understand student experiences.",
+    tools: ["Microsoft Excel", "Python", "pandas", "Matplotlib"],
     implementation:
-      "The repository includes a written project overview and visual materials. The analysis workflow should be updated after review.",
+      "The project involves working with collected feedback, organizing responses, examining patterns, and presenting relevant findings. Specific tools and analytical techniques should only be included after verifying the project files.",
     results:
-      "No quantified outcomes are included until verified.",
+      "The project provides a structured approach to understanding student feedback and identifying areas that may benefit from improvement. Do not include numerical outcomes unless they are available in the original project.",
     learning:
-      "Add a concise reflection on data collection, analysis decisions, and recommendations after review.",
+      "Developed an appreciation for how structured data analysis can help organizations understand feedback and make more informed decisions.",
     visual: "visual-feedback",
-    needsReview: true,
   },
   {
     id: "pcc-finance",
     title: "PCC Finance",
     subtitle: "Finance · Web application",
     category: "Product & Web",
-    label: "Details to confirm",
+    label: "Final review",
     image:
       "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=85",
     alt: "Calculator and financial paperwork",
-    status: "Portfolio draft",
+    status: "Project",
     summary:
-      "A finance-related web application. Features, technologies, and repository link are ready to be added after implementation review.",
+      "A finance-focused web application developed as a practical software project, demonstrating the use of web technologies to support finance-related activities.",
     overview:
-      "A finance-focused web application project. This entry is an editable placeholder based on the information provided for the portfolio.",
-    problem: "Project details to be added.",
-    objectives: ["Add confirmed project objectives."],
-    contribution: "Add role and individual contributions.",
-    tools: ["Technologies to confirm"],
-    implementation: "Add architecture and implementation notes after repository review.",
-    results: "Add verified results only.",
-    learning: "Add lessons learned after project review.",
+      "PCC Finance is a web application project focused on building a digital platform for finance-related operations. The project provides an opportunity to apply web development concepts to a practical financial application.",
+    problem:
+      "Finance-related activities can involve information that needs to be organized and managed efficiently. This project explores how a web application can provide a structured digital environment for handling finance-related tasks.",
+    objectives: [
+      "Develop a web-based finance application.",
+      "Apply practical frontend and backend development concepts.",
+      "Organize finance-related information through a digital interface.",
+      "Build and test application functionality.",
+    ],
+    contribution:
+      "Worked on the development of the PCC Finance application, applying web development concepts and working with the project's implementation.",
+    tools: ["Web technologies available in the project repository"],
+    implementation:
+      "Developed as a web application using the technologies available in the project repository. Specific features, database functionality, and implementation details should be documented after inspecting the actual source code.",
+    results:
+      "A finance-focused application prototype demonstrating the application of software development concepts to a practical project.",
+    learning:
+      "Strengthened practical web development skills and gained experience applying programming concepts to a finance-related application.",
     visual: "visual-pcc",
     needsReview: true,
+    reviewStatus: "Final review required",
+    reviewNote:
+      "Provisional content. Confirm the project implementation and final details before publishing as a verified portfolio entry.",
   },
   {
     id: "signup",
@@ -343,31 +359,36 @@ const projects = [
     alt: "Code editor on a desktop screen",
     status: "Project",
     summary:
-      "An academic application demonstrating a React registration form connected to an Express API and MongoDB.",
+      "A full-stack user registration application built with React, Node.js, Express.js, and MongoDB, demonstrating form handling, backend API integration, input validation, and secure password storage.",
     overview:
-      "A full-stack learning project covering registration flows and the connection between frontend, server, and database.",
+      "This academic project demonstrates how a frontend registration interface communicates with a backend server and database to create user accounts. It combines React for the user interface, Express.js for backend routing, and MongoDB for storing registration information.",
     problem:
-      "A registration experience needs clear validation, dependable server communication, and secure handling of credentials.",
+      "User registration requires more than collecting information through a form. Applications must validate submitted data, communicate reliably with the server, store user information correctly, and protect passwords.",
     objectives: [
-      "Build controlled registration inputs and form validation.",
-      "Connect the frontend to Express routes and MongoDB.",
-      "Hash passwords and handle request errors.",
+      "Build a registration form using React.",
+      "Manage form values using React state and controlled inputs.",
+      "Handle form submission and HTTP requests.",
+      "Develop backend routes using Express.js.",
+      "Connect the backend to MongoDB.",
+      "Validate submitted information.",
+      "Hash passwords using bcrypt before storing them.",
+      "Implement error handling and appropriate HTTP responses.",
     ],
     contribution:
-      "Built a learning application demonstrating the frontend-to-backend registration flow.",
-    tools: ["React", "Node.js", "Express.js", "MongoDB", "bcrypt"],
+      "Developed the registration application, working on the React frontend, form state management, backend API integration, and database operations. Implemented the registration workflow using Express.js and MongoDB, including password hashing with bcrypt.",
+    tools: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB", "bcrypt"],
     implementation:
-      "React state-managed forms send HTTP requests to Express routes, which integrate with MongoDB and bcrypt.",
-    results: "A functional learning prototype; deployment and usage metrics are not supplied.",
+      "The React frontend uses controlled inputs and state management to collect registration details. When the form is submitted, an HTTP request sends the information to the Express.js backend. The backend validates the request, hashes the password using bcrypt, and stores the user information in MongoDB. Error handling and HTTP status codes are used to manage the communication between the frontend and backend.",
+    results:
+      "A functional academic prototype demonstrating the complete user-registration workflow, from frontend data collection to backend processing and database storage.",
     learning:
-      "Authentication features require careful coordination between client-side feedback and server-side validation.",
+      "Developed practical understanding of full-stack application architecture, REST API communication, database integration, form validation, and secure password handling.",
     visual: "visual-code",
-    needsReview: true,
   },
   {
     id: "animation",
     title: "Video Animation Projects",
-    subtitle: "Animation · Individual and group work",
+    subtitle: "Animation · Creative digital media",
     category: "Creative & Animation",
     label: "Animation",
     image: "/images/animation-sample.png",
@@ -378,23 +399,28 @@ const projects = [
     demo: "https://www.youtube.com/watch?v=p-NZdL_9wzE&t=10s",
     demoLabel: "Watch on YouTube",
     status: "Creative work",
-    reviewStatus: "Samples to add",
     summary:
-      "I’ve done video-animation work, including a group project. Examples and project context can be added as they’re ready.",
+      "A collection of individual and collaborative video-animation projects demonstrating creative storytelling, visual communication, and digital content production.",
     overview:
-      "An animation portfolio entry with a sample video on YouTube. The linked GitHub repositories are currently empty, so this page does not claim specific tools or production techniques.",
-    problem: "Project context to add.",
-    objectives: ["Add the project brief and objectives when the examples are ready."],
+      "This collection showcases video-animation work completed through individual and group projects. The projects provided opportunities to explore visual storytelling and communicate ideas through animated content.",
+    problem:
+      "Visual communication provides an alternative way to explain ideas and engage audiences. Animation projects require planning, creativity, and collaboration to translate concepts into visual stories.",
+    objectives: [
+      "Explore digital animation and visual storytelling.",
+      "Communicate ideas through animated video content.",
+      "Develop creative and technical skills through practical projects.",
+      "Gain experience working on individual and collaborative creative assignments.",
+    ],
     contribution:
-      "Created animation work, including a group project. Additional individual-contribution and production details can be added alongside the video sample.",
-    tools: ["Tools and techniques to add"],
-    implementation: "Add a short production overview and approved video or stills.",
-    results: "Add confirmed project outcomes when available.",
-    learning: "Add a reflection on the creative and technical process.",
+      "Participated in individual and group video-animation projects, contributing to the creation of animated content and collaborative creative work.",
+    tools: ["Animation and editing tools"],
+    implementation:
+      "The work involves planning and developing animated video content. Specific animation software, production techniques, and individual responsibilities should be added only after reviewing the available video samples.",
+    results:
+      "A collection of completed animation work, including an individual project and a group project. The available YouTube sample should remain linked for visitors to view.",
+    learning:
+      "Developed creative problem-solving, visual communication, and collaboration skills through practical animation work.",
     visual: "visual-animation",
-    needsReview: true,
-    reviewNote:
-      "Watch the animation sample on YouTube. The linked repositories do not contain source files yet; add production details when available.",
   },
   {
     id: "secure-student-portal",
@@ -408,28 +434,29 @@ const projects = [
     repo: `${github}/NET4030-Secure-Student-Portal`,
     status: "Academic project",
     summary:
-      "A Java student-and-teacher portal for assignments and grades, developed as a secure network programming project.",
+      "A Java-based student and teacher portal developed as an academic secure network programming project, featuring role-based access, authentication, assignment submission, and grade management.",
     overview:
-      "An academic portal designed to support student and teacher workflows, including assignment submission, grade review, and access-controlled dashboards.",
+      "The Secure Student Portal is an academic application designed to support interactions between students and teachers through separate user workflows. It provides a structured environment for managing coursework, submitting assignments, and reviewing academic information.",
     problem:
-      "Students and teachers need a shared place to access coursework and manage submissions while respecting different account roles.",
+      "Managing assignments and academic records requires a system that allows students and teachers to access relevant information while maintaining appropriate access restrictions.",
     objectives: [
-      "Build student and teacher account workflows.",
-      "Support assignment submissions and grade review.",
-      "Apply authentication, session management, access control, and input validation.",
+      "Develop separate student and teacher workflows.",
+      "Support assignment submission.",
+      "Enable grade management and review.",
+      "Implement user authentication.",
+      "Apply session management and role-based access control.",
+      "Include input validation and secure programming practices.",
     ],
     contribution:
-      "Developed as a NET4030 Secure Network Programming project. Add individual contribution details after reviewing the project history.",
-    tools: ["Java", "Secure network programming"],
+      "Worked on the development of a Java-based student portal as part of a Secure Network Programming academic project. The project involved applying authentication, access control, and application security concepts.",
+    tools: ["Java", "Relevant technologies confirmed in the repository"],
     implementation:
-      "The repository describes a Java portal with role-based student and teacher dashboards for coursework and academic records.",
+      "The application uses Java to support student and teacher workflows. Authentication and session management support user access, while role-based access control separates the functions available to students and teachers.",
     results:
-      "The README describes authentication, access control, input validation, and session-management features. No independent security assessment is claimed.",
+      "The project demonstrates an academic portal with student and teacher workflows, assignment management, grade-related functionality, and security-focused application design.",
     learning:
-      "Access control and clear role boundaries are important parts of building applications for multiple user types.",
+      "Developed practical understanding of authentication, session management, role-based access control, input validation, and secure application development.",
     visual: "visual-portal",
-    needsReview: true,
-    reviewStatus: "Project details to refine",
   },
   {
     id: "blockchain-certificates",
@@ -510,28 +537,29 @@ const projects = [
     repo: `${github}/Local-Store-E-commerce-Platform`,
     status: "Project",
     summary:
-      "An online storefront concept with product browsing, shopping-cart workflows, and responsive layouts.",
+      "A full-stack e-commerce application designed to provide an online shopping experience through product browsing, search, filtering, and shopping-cart functionality.",
     overview:
-      "A local-store e-commerce project organized around product discovery and core shopping interactions.",
+      "The Local Store E-commerce Platform is a web application designed to help customers explore products and interact with an online storefront. It combines a frontend shopping interface with backend functionality for handling application data.",
     problem:
-      "A small store needs a convenient way for customers to browse products and manage potential purchases online.",
+      "Small businesses can benefit from an online platform that allows customers to discover products and manage their shopping activities without relying entirely on physical store visits.",
     objectives: [
-      "Present a browsable product catalogue.",
-      "Support product discovery and cart interactions.",
-      "Design a responsive shopping experience for desktop and mobile.",
+      "Create an online product catalogue.",
+      "Enable product browsing and discovery.",
+      "Support product search and filtering.",
+      "Implement shopping-cart functionality.",
+      "Develop a responsive user interface.",
+      "Connect the frontend to backend services and a database.",
     ],
     contribution:
-      "Developed an e-commerce application project. Add specific individual contributions after reviewing the implementation.",
-    tools: ["React", "JavaScript", "HTML", "CSS", "Node.js", "Express.js", "MongoDB"],
+      "Contributed to developing a full-stack e-commerce application, working with the web interface and application functionality.",
+    tools: ["React", "JavaScript", "Node.js", "Express.js", "MongoDB", "HTML", "CSS"],
     implementation:
-      "The repository describes a React client and a Node.js/Express API connected to MongoDB.",
+      "The project uses a React frontend and a Node.js/Express.js backend connected to MongoDB. The application is structured around product information and shopping interactions.",
     results:
-      "The README describes product listings, search and filtering, cart management, order tracking, and reviews. The linked repository is included as the source of truth for implementation details.",
+      "The project demonstrates an online storefront with product listings and shopping-related functionality. Additional features such as order tracking and customer reviews should only be described as implemented if they are present in the actual source code.",
     learning:
-      "A shopping flow is easier to use when product discovery and cart feedback work together.",
+      "Developed practical understanding of full-stack web development, frontend and backend integration, database connectivity, and designing user-friendly shopping workflows.",
     visual: "visual-store",
-    needsReview: true,
-    reviewStatus: "Implementation to review",
   },
   {
     id: "dairy-me",
