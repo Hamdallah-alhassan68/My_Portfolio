@@ -734,11 +734,10 @@ const experience = [
   {
     role: "Ambassador · YMAU VI",
     organization: "YALI Model at USIU-Africa",
-    date: "Dates to confirm",
+    date: "September 2026 – Present",
     description:
-      "Served as a YMAU VI Ambassador through the YALI Model at USIU-Africa. Specific activities and dates can be added when confirmed.",
+      "Serving as an Ambassador for YMAU VI at YALI Model at USIU-Africa.",
     skills: ["Youth leadership", "Ambassador engagement"],
-    reviewStatus: "Activities and dates to confirm",
     icon: Sparkles,
   },
   {
@@ -751,12 +750,11 @@ const experience = [
     icon: BadgeCheck,
   },
   {
-    role: "Role details to confirm",
+    role: "Inventory & Financial Data Operations",
     organization: "Baby Koko Restaurant",
-    date: "Dates to confirm",
+    date: "June 2018 – June 2024",
     description:
-      "Draft entry for review. Confirm whether this role is accurate, then provide the verified position, dates, and responsibilities before publishing.",
-    reviewStatus: "Verify employment, position, dates, and responsibilities",
+      "Handled inventory and financial data operations at Baby Koko Restaurant.",
     icon: BriefcaseBusiness,
   },
 ];
