@@ -33,7 +33,7 @@ The project browser groups work under AI & machine learning, data & BI, networks
 - Supplied Sales Trends and Social Media Analysis report PDFs are in `public/reports/` and are linked from their project cards.
 - Update project links, dates marked “to confirm,” contact details, and certificate links before publishing.
 - Project and community photographs use supplied local images where available and remote Unsplash images elsewhere; replace stock images with approved project photography as it becomes available.
-- The contact and call-request form sends submissions to `hamdallahalhassan68@gmail.com` through FormSubmit. Confirm the activation email FormSubmit sends after the first submission; afterward, replies can be sent directly to the submitter from the delivered email. Call requests are inquiries only and are not booked until confirmed directly.
+- The contact and call-request form validates the visitor's details and prepares an email draft to `hamdallahalhassan68@gmail.com` in their email app. The visitor must review and send the draft; the website does not send or store submissions. Call requests are inquiries only and are not booked until confirmed directly.
 - Google Fonts and the stock photographs require an internet connection.
 
 ## Curated public GitHub projects

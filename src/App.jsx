@@ -45,7 +45,7 @@ const projects = [
     summary:
       "A simulated Ghanaian mobile-money platform with behavioral anomaly detection, rule-based risk scoring, and a fraud-monitoring dashboard.",
     overview:
-      "MoMo Sentinel explores how transaction behavior can surface suspicious activity and support risk-based review in a simulated mobile-money service.",
+      "MoMo Sentinel is a prototype for reviewing transaction behavior and flagging activity that may need follow-up in a simulated mobile-money service.",
     problem:
       "A single transaction can look ordinary in isolation. Monitoring behavior over time can help flag activity that may need closer review.",
     objectives: [
@@ -54,7 +54,7 @@ const projects = [
       "Present alerts and transaction context in a monitoring interface.",
     ],
     contribution:
-      "Built a prototype workflow spanning transaction simulation, risk assessment, anomaly reporting, and dashboard review.",
+      "Built a prototype workflow that connects simulated transactions with risk assessment, anomaly reporting, and dashboard review.",
     tools: ["Python", "Flask", "React", "Isolation Forest", "XAMPP"],
     implementation:
       "A post-authorization monitoring and risk-control layer evaluates transaction behavior and produces review signals. It does not replace PINs or OTPs.",
@@ -77,23 +77,23 @@ const projects = [
     repo: `${github}/AIOPs`,
     status: "Project",
     summary:
-      "A NOC-style prototype applying machine learning to network telemetry, anomaly detection, incident triage, and operational recommendations.",
+      "A network-operations prototype that analyzes telemetry, surfaces anomalies, and presents incidents for review.",
     overview:
-      "AIOps explores how network telemetry and machine learning can support faster, more informed network operations.",
+      "The project brings together network telemetry, anomaly detection, and incident views in a NOC-style console.",
     problem:
       "Network teams can face noisy telemetry and a high volume of alerts, making it harder to distinguish unusual events from routine behavior.",
     objectives: [
-      "Prepare and analyze network monitoring data.",
-      "Explore Isolation Forest for unusual-activity detection.",
-      "Connect detected events with incident triage and suggested actions.",
+      "Prepare and analyze network telemetry.",
+      "Use Isolation Forest to flag unusual activity.",
+      "Present detected events alongside incident context.",
     ],
     contribution:
-      "Developed a network monitoring and incident-management project focused on telemetry processing, anomaly analysis, and operational visibility.",
+      "Worked on a network-monitoring prototype covering telemetry processing, anomaly analysis, and operational visibility.",
     tools: ["Python", "pandas", "scikit-learn", "Isolation Forest", "React"],
     implementation:
-      "The repository describes a NOC-style console with telemetry collection, anomaly detection, event correlation, incident creation, and simulated reroutes.",
+      "The repository describes a NOC-style console with telemetry collection, Isolation Forest anomaly detection, event correlation, incident views, and simulated reroute workflows.",
     results:
-      "The project demonstrates a monitoring workflow; published evaluation metrics are not provided.",
+      "The repository includes dashboards for network status, incidents, and service-level indicators. These are project features, not independently validated network-performance results.",
     learning:
       "Alert usefulness depends on context and prioritization, not detection alone.",
     visual: "visual-network",
@@ -112,7 +112,7 @@ const projects = [
     demo: "https://creaditrisk-hjlp.onrender.com",
     status: "Project",
     summary:
-      "A creditworthiness assessment prototype using applicant data and a Random Forest model to explore data-supported decisions in finance.",
+      "A creditworthiness assessment prototype that uses applicant data and a Random Forest model to explore data-supported decisions in finance.",
     overview:
       "A web application that demonstrates a machine-learning workflow for creditworthiness assessment. This is an academic prototype, not a system deployed by a bank.",
     problem:
@@ -128,7 +128,7 @@ const projects = [
     implementation:
       "The application connects an applicant-data form with a trained model and a results view.",
     results:
-      "Reported model ROC-AUC: approximately 0.936–0.937. Minority-class recall improved to approximately 0.80 in the improved model.",
+      "Reported model evaluation: ROC-AUC of approximately 0.936–0.937, with minority-class recall around 0.80 in the improved model. Treat these as project-reported results, not evidence of deployment by a bank.",
     learning:
       "Model quality is not captured by a single score; performance on the minority class also matters.",
     visual: "visual-credit",
@@ -638,28 +638,30 @@ const projects = [
     repo: `${github}/Get-Impeccable`,
     status: "Volunteer project",
     summary:
-      "A community organization website with React pages and forms backed by a PHP and MySQL submission service.",
+      "A digital-presence website for Get Impeccable, with organization and programme information plus a React frontend and PHP/MySQL form API in the repository.",
     overview:
-      "A digital-presence project for Get Impeccable that connects a React website and its forms to a database-backed PHP API.",
+      "The project supports the organization’s online presence through programme, opportunity, and participation pages. The repository includes React frontend code and PHP/MySQL endpoints for form submissions.",
     problem:
       "An organization needs a clear online presence and a practical way to receive contact, partnership, programme, and newsletter submissions.",
     objectives: [
-      "Present organizational information through a React web interface.",
-      "Collect form and newsletter submissions.",
-      "Connect submitted information to a PHP and MySQL backend.",
+      "Present the organization, its programmes, and opportunities.",
+      "Provide forms for contact, newsletter, and other listed participation routes.",
+      "Store supported form submissions through the PHP/MySQL API included in the repository.",
     ],
     contribution:
-      "Contributing as Operations Manager and volunteer on the organization’s digital presence. Add specific implementation responsibilities after confirming the work completed.",
+      "My confirmed role is Operations Manager (Volunteer). The repository documents the website and API; my individual coding contributions need to be confirmed before being attributed to me.",
     tools: ["React", "Vite", "PHP", "MySQL"],
     implementation:
-      "The repository describes a React frontend that sends form submissions to a PHP API, with MySQL storage for supported form types.",
+      "The repository includes a React frontend, a JavaScript API helper, PHP submission and database-connection files, and a MySQL schema. The presence of these files does not establish that the deployed forms and database are configured or working.",
     results:
-      "The repository documents forms for contact, newsletter, partnerships, donations, classes, and opportunities.",
+      "The repository defines submission types for contact, newsletter, partnership, delegate, donation, class, and opportunity forms. Live form delivery was not tested.",
     learning:
       "A useful organization website should connect clear programme information with practical ways to get involved.",
     visual: "visual-impeccable",
     needsReview: true,
     reviewStatus: "Contribution to clarify",
+    reviewNote:
+      "Repository files document the frontend and PHP/MySQL form API. Confirm which site or API features you personally implemented.",
   },
 ];
 
@@ -667,26 +669,17 @@ const experience = [
   {
     role: "IT Support & Systems Data Assistant",
     organization: "Pinnacle Construction Co. Ltd. (PCC)",
-    date: "Sep 2026 – Present · Accra, Ghana",
+    date: "4 September 2026 – Present · Accra, Ghana",
     description:
-      "Supporting IT operations and systems data integrity across department functions.",
-    highlights: [
-      "Maintained 100% operational data integrity through structured data analysis and technical documentation for IT infrastructure systems.",
-      "Delivered daily system administration reports and real-time infrastructure performance metrics, contributing to a reported 20% improvement in executive decision-making speed.",
-    ],
+      "Providing IT support and assisting with systems data.",
     icon: PanelsTopLeft,
   },
   {
-    role: "Volunteer",
+    role: "IT Tutor · Volunteer",
     organization: "Angaza Technology Center",
-    date: "May 2026 – Sep 2026 · Kenya",
+    date: "23 May 2026 – 21 August 2026 · Kenya",
     description:
-      "Mentored high school students through remote digital literacy and STEM learning sessions.",
-    highlights: [
-      "Mentored 45+ students through virtual sessions focused on digital literacy and STEM.",
-      "Designed interactive modules introducing coding, data analysis, and digital problem-solving.",
-      "Guided participants in applying STEM concepts to real-world challenges and building career readiness.",
-    ],
+      "Volunteered as an IT Tutor at Angaza Technology Center.",
     icon: HeartHandshake,
   },
   {
@@ -694,11 +687,12 @@ const experience = [
     organization: "Future Intern",
     date: "Jun 2025 – Aug 2025 · Remote",
     description:
-      "Built reporting workflows and analyzed digital engagement data to support stakeholder reporting.",
+      "Built reporting workflows and analyzed digital engagement data during a remote data analytics internship.",
     highlights: [
-      "Built Power BI and Excel analytics pipelines, contributing to a reported 30% increase in departmental reporting efficiency.",
-      "Used Python to analyze digital engagement metrics and support accurate performance tracking and stakeholder reports.",
+      "Used Power BI and Excel to automate reporting and streamline engagement-data processing.",
+      "Used Python to analyze digital engagement metrics and support performance tracking and stakeholder reporting.",
     ],
+    skills: ["Power BI", "Microsoft Excel", "Python", "Data reporting"],
     icon: PanelsTopLeft,
   },
   {
@@ -706,7 +700,8 @@ const experience = [
     organization: "Millennium Campus Network (MCN) · USIU-A",
     date: "Class of 2025",
     description:
-      "Led 26 fellows, coordinated six sessions, and supported learning and leadership activities.",
+      "Led a cohort of 26 fellows and coordinated six sessions, supporting student engagement, peer learning, and leadership activities.",
+    skills: ["Fellow leadership", "Session coordination", "Student engagement"],
     icon: BriefcaseBusiness,
   },
   {
@@ -714,7 +709,8 @@ const experience = [
     organization: "Nexo Girls",
     date: "Dates to confirm",
     description:
-      "Contributing to the organization’s React website, responsive components, and digital presence; separately supporting girls’ exposure to machine learning.",
+      "Leads volunteer web-design work on the organization’s React website and separately supports a machine-learning training initiative for girls.",
+    skills: ["React", "JavaScript", "CSS", "Machine-learning outreach"],
     icon: Code2,
   },
   {
@@ -722,7 +718,8 @@ const experience = [
     organization: "Get Impeccable",
     date: "Dates to confirm",
     description:
-      "Supporting organizational operations, coordinating activities, and participating in youth-development work.",
+      "Supports day-to-day operations and activity coordination for a youth-development organization.",
+    skills: ["Operations", "Activity coordination", "Youth development"],
     icon: HeartHandshake,
   },
   {
@@ -730,7 +727,8 @@ const experience = [
     organization: "Good Samaritan",
     date: "Dates to confirm",
     description:
-      "Supported practical digital-skills learning in computer literacy, Excel, Canva, PowerPoint, HTML, CSS, Python fundamentals, C#, and soft skills.",
+      "Supported learners with basic computer use, digital literacy, introductory HTML and CSS, and basic C# programming.",
+    skills: ["Computer literacy", "HTML", "CSS", "C#"],
     icon: GraduationCap,
   },
   {
@@ -738,7 +736,9 @@ const experience = [
     organization: "YALI Model at USIU-Africa",
     date: "Dates to confirm",
     description:
-      "Participating in youth leadership and ambassador activities.",
+      "Served as a YMAU VI Ambassador through the YALI Model at USIU-Africa. Specific activities and dates can be added when confirmed.",
+    skills: ["Youth leadership", "Ambassador engagement"],
+    reviewStatus: "Activities and dates to confirm",
     icon: Sparkles,
   },
   {
@@ -746,19 +746,17 @@ const experience = [
     organization: "Mastercard Foundation Scholars Program",
     date: "Dates to confirm",
     description:
-      "Scholarship recipient and participant in leadership development and community engagement, including the Fountain of Grace community challenge.",
+      "Mastercard Foundation Scholar involved in transformative leadership and community engagement, including the Fountain of Grace community project.",
+    skills: ["Transformative leadership", "Community engagement"],
     icon: BadgeCheck,
   },
   {
-    role: "Inventory & Financial Data Operations Manager",
+    role: "Role details to confirm",
     organization: "Baby Koko Restaurant",
-    date: "Aug 2018 – Jul 2022",
+    date: "Dates to confirm",
     description:
-      "Managed inventory and financial data operations, including procurement tracking and daily performance monitoring.",
-    highlights: [
-      "Developed inventory tracking and procurement workflows, contributing to a reported 15% reduction in resource waste and food spoilage.",
-      "Tracked profit and loss, revenue, food-preparation targets, and customer feedback to support daily operational decisions.",
-    ],
+      "Draft entry for review. Confirm whether this role is accurate, then provide the verified position, dates, and responsibilities before publishing.",
+    reviewStatus: "Verify employment, position, dates, and responsibilities",
     icon: BriefcaseBusiness,
   },
 ];
@@ -783,17 +781,17 @@ const education = [
 
 const skillGroups = [
   {
-    title: "Programming",
+    title: "Programming languages",
     icon: Code2,
     skills: ["Python", "Java", "JavaScript", "C++", "C#"],
   },
   {
-    title: "Data & analytics",
+    title: "Data analytics & visualization",
     icon: PanelsTopLeft,
     skills: ["SQL", "Excel", "Power BI", "Tableau", "R", "pandas"],
   },
   {
-    title: "Machine learning",
+    title: "Artificial intelligence & machine learning",
     icon: BrainCircuit,
     skills: ["scikit-learn", "Data preprocessing", "Predictive modelling", "Anomaly detection"],
   },
@@ -803,17 +801,27 @@ const skillGroups = [
     skills: ["React", "Flask", "HTML", "CSS", "Node.js", "Express.js"],
   },
   {
-    title: "Networking & systems",
-    icon: Network,
-    skills: ["Computer networking", "Cisco Packet Tracer", "Network monitoring", "XAMPP"],
-  },
-  {
-    title: "Tools & databases",
+    title: "Databases",
     icon: PanelsTopLeft,
-    skills: ["Git", "GitHub", "VS Code", "MongoDB", "SQLite", "Arduino", "Robotics"],
+    skills: ["MongoDB", "SQLite", "MySQL"],
   },
   {
-    title: "Creative & animation",
+    title: "Computer networking",
+    icon: Network,
+    skills: ["Computer networking", "Cisco Packet Tracer", "Network monitoring"],
+  },
+  {
+    title: "Development tools & platforms",
+    icon: PanelsTopLeft,
+    skills: ["Git", "GitHub", "VS Code", "Vite", "XAMPP"],
+  },
+  {
+    title: "Hardware & IoT",
+    icon: Network,
+    skills: ["Arduino", "Robotics"],
+  },
+  {
+    title: "Creative work",
     icon: Sparkles,
     skills: ["Animation", "Video animation"],
   },
@@ -915,6 +923,17 @@ const communityProjects = [
       "Joined a community challenge involving practical tote-bag training. I supported the activity and learned sewing alongside the community—a reminder that service can also be mutual learning.",
     tags: ["Practical skills", "Collaboration", "Mutual learning"],
     visual: "community-grace",
+  },
+  {
+    title: "Machine-learning training and girls’ STEM participation",
+    place: "Nexo Girls",
+    image: "/images/nexo-girls-banner.png",
+    imageLabel: "Nexo Girls community initiative",
+    alt: "Nexo Girls Metaverse banner featuring young women",
+    description:
+      "Separately from my website work, I support a Nexo Girls training initiative that introduces girls to machine learning, artificial intelligence, and emerging technologies.",
+    tags: ["Girls in STEM", "Machine learning", "Emerging technology"],
+    visual: "community-nexo",
   },
 ];
 
@@ -1092,7 +1111,7 @@ function App() {
   const [activeProject, setActiveProject] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [messageState, setMessageState] = useState("");
-  const [isSending, setIsSending] = useState(false);
+  const [emailDraft, setEmailDraft] = useState("");
   const dialogRef = useRef(null);
 
   const visibleProjects = projects.filter(
@@ -1104,71 +1123,37 @@ function App() {
     setMobileMenuOpen(false);
   }
 
-  async function handleContactSubmit(event) {
+  function handleContactSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
+    setEmailDraft("");
+    setMessageState("");
     if (!form.reportValidity()) {
       setMessageState("Please complete each field with a valid email address.");
       return;
     }
 
-    setIsSending(true);
-    setMessageState("");
-
     const formData = new FormData(form);
-    const subject = formData.get("subject");
-    formData.set("_subject", `Portfolio inquiry: ${subject}`);
-    formData.set("_template", "table");
+    const inquiry = form.querySelector('[name="subject"]').selectedOptions[0].textContent;
+    const body = [
+      `Name: ${formData.get("name")}`,
+      `Email: ${formData.get("email")}`,
+      `Inquiry: ${inquiry}`,
+      `Preferred date: ${formData.get("preferred-date") || "Not specified"}`,
+      `Preferred time: ${formData.get("preferred-time") || "Not specified"}`,
+      `Time zone: ${formData.get("timezone") || "Not specified"}`,
+      "",
+      "Message:",
+      formData.get("message"),
+    ].join("\n");
+    const subject = encodeURIComponent(`Portfolio inquiry: ${inquiry}`);
+    const encodedBody = encodeURIComponent(body);
 
-    try {
-      let response;
-      try {
-        response = await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: formData,
-        });
-      } catch {
-        setMessageState("We couldn’t connect to the email service. Please email me directly instead.");
-        return;
-      }
-
-      let result;
-      try {
-        result = await response.json();
-      } catch {
-        setMessageState("The email service returned an unexpected response. Please email me directly instead.");
-        return;
-      }
-
-      const succeeded =
-        result &&
-        typeof result === "object" &&
-        [true, "true"].includes(result.success);
-      if (!response.ok || !succeeded) {
-        const serviceMessage =
-          result && typeof result === "object" && result.message;
-        if (
-          typeof serviceMessage === "string" &&
-          serviceMessage.toLowerCase().includes("confirm your email")
-        ) {
-          setMessageState(
-            `FormSubmit has not activated delivery to ${contactEmail} yet. Check that inbox, including spam, for FormSubmit’s activation email and click its confirmation link. Then submit your inquiry again.`,
-          );
-          return;
-        }
-        setMessageState(
-          serviceMessage ||
-            "Your message could not be sent. Please email me directly instead.",
-        );
-        return;
-      }
-
-      setMessageState("Thanks — your message was sent. I’ll get back to you by email.");
-      form.reset();
-    } finally {
-      setIsSending(false);
-    }
+    setEmailDraft(`mailto:${contactEmail}?subject=${subject}&body=${encodedBody}`);
+    setMessageState(
+      "Your email draft is ready. Open it below, then select Send in your email app to deliver your message.",
+    );
+    form.reset();
   }
 
   return (
@@ -1273,16 +1258,16 @@ function App() {
             />
             <div className="about-body">
               <p className="about-lead">
-                I’m Hamdallah, a fourth-year Computer Networking student at USIU-Africa, originally from Ghana and currently based in Nairobi.
+                I’m Hamdallah, a Ghanaian student in my fourth year of the Bachelor of Applied Computer Technology at USIU-Africa, specializing in Computer Networking.
               </p>
               <p>
-                My journey began at African Science Academy, where studying mathematics, physics, further mathematics, programming, and robotics gave me a strong foundation—and the confidence to keep asking how things work.
+                I moved from Ghana to Kenya for my studies. At African Science Academy, where I was a scholarship student in the Class of 2023, I studied mathematics, physics, further mathematics, programming, and robotics.
               </p>
               <p>
-                Today, as a Mastercard Foundation Scholar, I’m exploring the connections between networks, data analytics, artificial intelligence, and software. I enjoy turning new ideas into practical projects, whether that means investigating a pattern in data or building an interface that makes a system easier to use.
+                As a Mastercard Foundation Scholar, I’m developing interests in networking, data analytics, artificial intelligence and machine learning, software development, and financial technology. I like using projects to understand how technology can address practical problems.
               </p>
               <p>
-                Leadership and community work are an important part of that journey. I value collaboration, sharing what I learn, and helping more young people—especially girls—see a place for themselves in technology.
+                Community work is part of that journey too. I value learning with others, sharing practical technology skills, and helping young people—especially girls—explore opportunities in STEM.
               </p>
             </div>
             <a className="text-link about-link" href="#experience">More about my journey <ArrowRight size={16} /></a>
@@ -1432,6 +1417,14 @@ function App() {
                           {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
                         </ul>
                       )}
+                      {item.skills && (
+                        <div className="timeline-skills">
+                          {item.skills.map((skill) => <span key={skill}>{skill}</span>)}
+                        </div>
+                      )}
+                      {item.reviewStatus && (
+                        <p className="timeline-review">For review: {item.reviewStatus}</p>
+                      )}
                     </div>
                   </article>
                 );
@@ -1476,7 +1469,7 @@ function App() {
               <SectionHeading
                 eyebrow="06 / Certificates"
                 title={<>Professional certificates<br /><em>&amp; training.</em></>}
-                copy="The Google Data Analytics credential is available as a PDF with a verification link; image placeholders remain for other training."
+                copy="View certificate previews and open the original credentials. Additional training certificates can be added as they are confirmed."
               />
               <div className="certificate-seal"><BadgeCheck size={21} /><span>Credentials</span></div>
             </div>
@@ -1529,7 +1522,7 @@ function App() {
           <div className="section-shell">
             <div className="section-topline skills-topline">
               <SectionHeading
-                eyebrow="06 / Toolkit"
+                eyebrow="07 / Toolkit"
                 title={<>A toolkit that keeps<br /><em>getting broader.</em></>}
                 copy="Areas I’ve explored through coursework, community work, and projects."
               />
@@ -1546,7 +1539,7 @@ function App() {
                 );
               })}
               <article className="skill-card soft-skills-card">
-                <div className="skill-card-heading"><HeartHandshake size={19} /><h3>How I work</h3></div>
+                <div className="skill-card-heading"><HeartHandshake size={19} /><h3>Professional &amp; leadership skills</h3></div>
                 <div className="tag-list">
                   {["Analytical thinking", "Problem-solving", "Communication", "Team collaboration", "Leadership", "Coordination", "Presentation", "Research"].map((skill) => <span className="skill-tag" key={skill}>{skill}</span>)}
                 </div>
@@ -1594,9 +1587,16 @@ function App() {
                 <Download size={16} /> Download my CV
               </a>
             </div>
-            <form className="contact-form" onSubmit={handleContactSubmit}>
+            <form
+              className="contact-form"
+              onSubmit={handleContactSubmit}
+              onChange={() => {
+                setEmailDraft("");
+                setMessageState("");
+              }}
+            >
               <div className="form-heading"><span>Have a project or opportunity in mind?</span><Send size={17} /></div>
-              <p className="form-intro">Tell me what you have in mind. You can also request a call; no meeting is booked until we confirm it directly. Messages are sent securely through FormSubmit. The first submission requires confirming my email address with them.</p>
+              <p className="form-intro">Tell me what you have in mind or request a call. Submitting prepares an email draft addressed to me; review it and select Send in your email app. A call is not booked until we confirm it directly.</p>
               <label>
                 Your name
                 <input name="name" type="text" autoComplete="name" placeholder="How should I address you?" required />
@@ -1642,11 +1642,17 @@ function App() {
                 Message
                 <textarea name="message" rows="4" placeholder="A little about what you have in mind..." required />
               </label>
-              <button className="button button-dark form-submit" type="submit" disabled={isSending}>
-                {isSending ? "Sending..." : "Send inquiry"} <ArrowUpRight size={16} />
-              </button>
+              {emailDraft ? (
+                <a className="button button-dark form-submit" href={emailDraft}>
+                  Open email draft <ArrowUpRight size={16} />
+                </a>
+              ) : (
+                <button className="button button-dark form-submit" type="submit">
+                  Prepare email <ArrowUpRight size={16} />
+                </button>
+              )}
               <p className={`form-status${messageState ? " form-status-visible" : ""}`} role="status" aria-live="polite">
-                {messageState || "Your inquiry will be emailed to me. A call is only scheduled after we confirm it directly."}
+                {messageState || "Submitting prepares an email draft; the message is sent only after you select Send in your email app."}
               </p>
             </form>
           </div>
